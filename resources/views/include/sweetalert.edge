@@ -1,0 +1,20 @@
+@if(flashMessage('notification'))
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<script>
+Swal.fire({
+  position: 'top-end',
+  type: '{{ flashMessage('notification.type')}}',
+  title: '{{ flashMessage('notification.text')}}',
+  showConfirmButton: false,
+  timer: 3000
+})
+</script>
+<style>
+body.swal2-height-auto {
+  height: 100% !important;
+}
+</style>
+@endif
+
+
